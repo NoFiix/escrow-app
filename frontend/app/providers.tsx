@@ -13,7 +13,7 @@ const config = getDefaultConfig({
   chains: [hardhat],
   ssr: true, // If your dApp uses server side rendering (SSR)
   transports: {
-    [hardhat.id]: http('http://localhost:3000/'),
+    [hardhat.id]: http('http://127.0.0.1:8545'),
   },
 })
 

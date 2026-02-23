@@ -13,20 +13,35 @@
 }
 
 .navbar {
-  @apply flex justify-between items-center p-10;
+  @apply sticky top-0 z-50 flex items-center justify-between px-6 py-4
+         bg-background/80 backdrop-blur-md border-b;
 }
  
-.main { 
-  @apply p-10 grow;
+.main {
+  @apply grow mx-auto w-full max-w-6xl px-6 py-10;
 }
 
 .footer {
-  @apply w-full flex justify-center p-10;
+  @apply w-full flex justify-center px-6 py-10 text-sm text-muted-foreground;
 }
  
 .title {
   @apply text-4xl mb-4;
 }
+
+.card {
+  @apply rounded-2xl border bg-card p-5 shadow-sm;
+}
+
+.btn {
+  @apply inline-flex items-center justify-center rounded-xl border px-4 py-2 text-sm font-medium
+         hover:bg-accent transition;
+}
+.btn-primary {
+  @apply bg-foreground text-background hover:opacity-90;
+}
+
+
 
 @theme inline {
   --color-background: var(--background);
@@ -73,8 +88,8 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.141 0.005 285.823);
+  --background: oklch(0.99 0 0);
+  --foreground: oklch(0.16 0.005 285.823);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.141 0.005 285.823);
   --popover: oklch(1 0 0);
@@ -141,10 +156,13 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+  h1 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+  h2 {
+    @apply text-xl font-semibold tracking-tight;
   }
 }

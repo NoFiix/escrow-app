@@ -1,6 +1,5 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 
 const Layout = ({ children }: Readonly<{
   children: React.ReactNode;
@@ -17,3 +16,4 @@ const Layout = ({ children }: Readonly<{
 }
 
 export default Layout
+
